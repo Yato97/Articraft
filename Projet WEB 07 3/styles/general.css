@@ -1,0 +1,420 @@
+/*-------------------------------STYLE GENERAL------------------------------*/
+/*--------------------------------------------------------------------------*/ 
+@import url('https://fonts.googleapis.com/css?family=Laila');
+body {
+	margin: 0px; /*Reset*/
+	padding: 0px; /*Reset*/
+}
+/*--------------------------------------------------------------------------*/
+/*-------------------------------STYLE GENERAL------------------------------*/
+
+
+
+/*-------------------------------MENU DEROULANT-----------------------------*/
+/*--------------------------------------------------------------------------*/ 
+
+
+/*--------------------------------------------------------------------------*/ 
+/*Display + supprime les soulignés*/
+nav  a {
+	font-family: 'Laila', serif;
+	display: inline-block;
+	text-decoration: none;
+}
+
+/*Couleur de fond + largeur max*/
+nav {
+	width: 100%;
+}
+
+/*Supprime les puces*/
+nav li {
+	list-style-type: none; 
+}
+
+
+nav > ul { 
+	margin: 0px; /*Reset*/
+	padding: 0px; /*Reset*/
+}
+
+/*Pseudo elem after:; content, display, clear*/
+nav > ul::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+nav{
+	width: 100%;
+	height: 50px;
+}
+
+.toggle {
+	display: none;
+	width: 30px;
+	height: 100%;
+	padding: 0px 45px;
+	align-items: center;
+	cursor: pointer;
+	}
+
+/*Crée 3 barre blanche = bouton*/
+span.toggle_icon, span.toggle_icon:before, span.toggle_icon:after {
+	display: block;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	position: relative;
+}
+
+/*Dispose les barre*/
+span.toggle_icon:before{top:9px;}
+span.toggle_icon:after{top:-10px;}
+
+
+/*Ecran large*/
+/*--------------------------------------------------------------------------*/ 
+@media (min-width: 750px) {
+	/*Style dynamiquee*/
+	nav > ul > li:hover a{
+		transition:padding-top 0.5s;
+		padding-top:9px ;
+	}
+
+	/*Cache les sous onglets*/
+	.submenu {	
+		display: none; 
+		padding: 0px; /*supprime le padding*/
+	}
+
+	nav > ul > li {
+		width: 10rem;
+		z-index: 30;
+	}
+
+	#menu1 {
+		width: 6rem;
+		padding-left: 30px;
+	}	
+
+	/*Hover quand le pointeur passe sur les LI principales : dévoile les sous onglets*/
+	nav li:hover .submenu{
+		display: block;
+		position: absolute;
+		top: 100%;
+		left: 0%;
+		cursor: context-menu;
+	}
+
+	/*Style texte dans el bouton*/
+	.submenu > li > a {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		font-size: 14px;
+		width: 10em;
+		color: white;	
+	}
+
+	/*Couleur texte dans a + padding*/
+	nav > ul > li > a {
+		color: #FFF;
+		padding-top: 11px;
+		padding-bottom: 11px;
+	}
+
+	/* Met tous les li principales cote a cote */
+	nav > ul > li {
+		float: left; 
+		position: relative;
+	}
+
+	/*Bordure de 2 pixel*/
+	.submenu > li{
+		border-bottom: 2px solid #424558;
+	}
+
+
+	.submenu > li:hover a {
+		color: orange;
+	}
+
+}
+
+
+/*Ecran petit*/
+/*--------------------------------------------------------------------------*/ 
+@media (max-width: 750px) {
+
+	
+
+	nav { position: absolute;
+		z-index: 30;
+
+	}
+
+	nav > ul {
+		display: flex;
+		position: absolute;
+		top: 50px;
+		width: 100%;
+		left: 0px;
+	}
+
+	#menu1 {
+		width: 18%;
+	}
+
+	.lix {
+		width: 30%
+	}
+	
+	/*Style au survol*/
+	.lix:hover > a {
+		padding-top: 1px;
+	}
+
+	nav > ul > li {
+		height: 40px;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	/*Afiiche le bouton responsive*/
+	.toggle{
+		display: flex;
+	}
+
+	/*Couleur texte dans a + padding*/
+	nav > ul > li > a {
+		color: #FFF;
+	}
+
+	/*Style texte dans el bouton*/
+	.submenu > li > a {
+		width: 100%;
+		height: 100%;
+	}
+	
+	/*Cache les sous onglets*/
+	.submenu {
+		display: none;
+		padding: 0px;
+		width: 100%;
+		margin-top: 6px;
+	
+	}
+	
+	/*Dispose les box*/
+	.submenu > li {
+		flex: 1 0 0;
+		padding-top: 10px;
+		padding-bottom: 15px;
+		border-bottom: 2px solid #424558;
+	}
+
+	.submenu > li:hover a {
+		color: orange;
+	}
+
+	.submenu > li > a {
+		color: white;
+		
+	}
+
+	/*Hover quand le pointeur passe sur les LI principales : dévoile les sous onglets*/
+	nav li:hover .submenu{
+		display: flex;
+		cursor: pointer;
+		flex-direction: column;
+	}
+	
+	/*Transition du haut vers le bas quand on clique sur le bouton responsive*/
+	/*JavaScript*/
+	.open {
+		transform: translateY(-200%);
+		transition: all 0.5s ease-in-out;
+		opacity: 0;
+	}
+
+	.isopen {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+
+
+}
+
+
+/*--------------------------------------------------------------------------*/ 
+
+/*Ecran très petit*/
+/*--------------------------------------------------------------------------*/ 
+@media (max-width: 400px) {
+
+	
+
+
+	nav { position: absolute;
+		z-index: 30;
+
+	}
+
+	nav > ul {
+		display: flex;
+		position: absolute;
+		top: 50px;
+		width: 100%;
+		left: 0px;
+	}
+
+	#menu1 {
+		width: 12%;
+	}
+
+	.lix {
+		width: 26%
+	}
+
+	#sp { width: 34%; }
+	
+	/*Style au survol*/
+	.lix:hover > a {
+		padding-top: 1px;
+	}
+
+	nav > ul > li {
+		height: 40px;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	/*Afiiche le bouton responsive*/
+	.toggle{
+		display: flex;
+	}
+
+
+	/*Couleur texte dans a + padding*/
+	nav > ul > li > a {
+		color: #FFF;
+	}
+
+	/*Style texte dans el bouton*/
+	.submenu > li > a {
+		width: 100%;
+		height: 100%;
+	}
+	
+	/*Cache les sous onglets*/
+	.submenu {
+		display: none;
+		padding: 0px;
+		width: 100%;
+		margin-top: 6px;
+	
+	}
+	
+	/*Dispose les box*/
+	.submenu > li {
+		flex: 1 0 0;
+		padding-top: 10px;
+		padding-bottom: 15px;
+		border-bottom: 2px solid #424558;
+	}
+
+	.submenu > li:hover a {
+		color: orange;
+	}
+
+	.submenu > li > a {
+		color: white;
+		
+	}
+
+	/*Hover quand le pointeur passe sur les LI principales : dévoile les sous onglets*/
+	nav li:hover .submenu{
+		display: flex;
+		cursor: pointer;
+		flex-direction: column;
+	}
+	
+	/*Transition du haut vers le bas quand on clique sur le bouton responsive*/
+	/*JavaScript*/
+	.open {
+		transform: translateY(-200%);
+		transition: all 0.5s ease-in-out;
+		opacity: 0;
+	}
+
+	.isopen {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+
+
+
+}
+
+
+/*--------------------------------------------------------------------------*/ 
+
+
+/*--------------------------------------------------------------------------*/
+/*-------------------------------MENU DEROULANT-----------------------------*/
+
+
+
+
+/*-------------------------------PIED DE PAGE-------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+/*Pied de page déjà responsive*/
+footer {
+	display: flex;
+	width: 100%;
+	background-color: #45454D;
+}
+
+footer > div {
+	z-index: 20;
+	flex: 1 0 0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	
+}
+
+footer > div > div {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	margin-top: 40px;
+	
+}
+
+footer > div > div > a {
+	font-family: 'Laila', serif;
+	padding: 10px;
+	line-height: 0.7;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	transition:  300ms;
+}
+
+/*Transition au survole*/
+footer > div > div > a:hover {
+	color: orange;
+}
+
+.item-footer {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border-right: 1px solid white;
+}
+
+
+/*--------------------------------------------------------------------------*/
+/*-------------------------------PIED DE PAGE-------------------------------*/

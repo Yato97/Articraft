@@ -1,0 +1,26 @@
+/*Ecran petit*/
+/*--------------------------------------------------------------------------*/ 
+@media (max-width: 750px) {
+	
+	/*Met le background uniquement sur la page d'acceuil*/ 
+	nav > ul {
+		background: #424558;
+	}
+
+	/*Met le background uniquement sur la page d'acceuil*/ 
+	.submenu {
+		background-color: #424558;
+
+	}
+	
+	/*Sur les autre pages "acceuil exclu" la bordure apparaitra mais pas le background*/ 
+	.subunique > li:hover {
+		opacity: 0.8;
+		border-bottom: 1px dotted white;
+	}
+}
+
+/*Met le background uniquement sur la page d'acceuil*/ 
+nav {
+	background-color: #424558;
+}

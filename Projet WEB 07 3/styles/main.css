@@ -1,0 +1,281 @@
+
+/*-------------------------------FONTS--------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700');
+@import url('https://fonts.googleapis.com/css?family=Laila');
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+
+/*--------------------------------------------------------------------------*/
+/*-------------------------------FONTS--------------------------------------*/
+
+
+
+
+/*-------------------------------DIAPORAMA----------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+
+/*Parametres généraux*/
+/*--------------------------------------------------------------------------*/
+
+/*Diaporama z-10 pour qu'on puisse afficher au dessu*/
+#slideshow-container {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: -10;
+}
+
+/*JavaScript -> main.js*/
+#slideshow{
+	width: 100%;
+	height: 100%;
+	transition: all 1s;
+}
+
+/*Cache les images*/ 
+.images {
+	display: none;
+}
+
+/*Titre de niveau 1*/ 
+h1 {
+	margin:0em;
+	font-family: 'Amatic SC', serif;
+	opacity: 0.8;
+	color: white;
+	text-align: center;
+	position: relative;
+}
+
+/*Affiche une image en attendant que le script lance le diapo 4s*/
+#slideshow-container > img {
+	position: absolute;
+	z-index: -20;
+	object-fit: cover;
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+/*Ecran large*/
+/*--------------------------------------------------------------------------*/
+@media(min-width: 750px) {
+	#slideshow-container{
+		height: 100%;
+		height: 95vh;
+	}
+
+	
+	/*Titre de niveau 1*/ 
+	h1 {	
+		font-size: 70px;
+		padding-top: 150px;
+	}
+}
+
+/*Ecran petit*/
+/*--------------------------------------------------------------------------*/ 
+@media (max-width: 750px) {
+
+	#slideshow-container{
+		height: 100%;
+		height: 100vh;
+	}
+	
+
+	/*Titre de niveau 1*/ 
+	h1 {
+		font-size: 50px;
+		padding-top: 200px;
+	}
+}
+
+/*--------------------------------------------------------------------------*/
+/*-------------------------------DIAPORAMA----------------------------------*/
+
+
+
+
+/*-------------------------------ZONZ TITRE---------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+
+/*Parametres généraux*/
+/*--------------------------------------------------------------------------*/
+#titre > h2{
+	font-family: 'Laila' , serif;
+	text-align: center;
+	margin: 0em;
+    color: white;
+    opacity: 0.8;
+}
+
+/*--------------------------------------------------------------------------*/
+
+
+
+/*Ecran large*/
+/*--------------------------------------------------------------------------*/
+@media(min-width: 750px) {
+	#titre{
+		width: 100%;
+		height: 3.6em;
+		background-color: #45454D;
+	}
+
+	#titre > h2{
+	    line-height: 2.5;
+	}
+}
+
+/*Ecran petit*/
+/*--------------------------------------------------------------------------*/ 
+@media (max-width: 750px) {
+	#titre{
+		width: 100%;
+		height: 2.6em;
+		background-color: #45454D;
+	}
+
+	#titre > h2{
+	    padding-top:8px; 
+	    font-size: 17px;
+
+	}
+
+}
+/*-------------------------------ZONZ TITRE---------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+
+
+
+
+/*-------------------------------SECTION------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+
+
+
+/*Parametres généraux*/
+/*--------------------------------------------------------------------------*/
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+section {
+	display: flex;
+}
+
+section > div > div {
+	background-color: rgba(70,70,80,0.7);
+	position: absolute;
+	opacity: 0;
+	transition-property: opacity, margin-top;
+	transition-duration: 600ms;
+}
+
+section > div:hover > div {
+	opacity: 1;
+}
+
+section > div > div > p {
+	font-family: 'Old Standard TT', serif;
+	color: white;
+	text-align: center;
+}
+
+/*--------------------------------------------------------------------------*/
+
+
+
+
+/*Ecran large*/
+/*--------------------------------------------------------------------------*/
+@media(min-width: 800px) {
+	/*Prend toute la largeur + 40vh + 20vh footer : remplis la page*/
+	section {
+		width: 100%;
+		height: 40vh;
+		box-sizing: border-box;
+		border: 1px solid #424558;
+	}
+
+	section > div {
+		flex: 1 0 0;
+		border-right: 1px solid #424558;
+	}
+
+	/*Affiche une barre d'info effet slide de haut en bas + opacity de 0 a 0.5*/
+	section > div > div {
+		width: 33.33%;
+		height: 13%;
+		margin-top: 27vh;
+
+	}
+
+	section > div > div > p {
+		font-size: 17px ;
+	}
+}
+
+
+
+/*Ecran petit*/
+/*--------------------------------------------------------------------------*/ 
+@media (max-width: 800px) {
+
+	section {
+		flex-direction: column;
+	}
+
+	section > div {
+		width: 100%;
+		height: 300px;
+	}
+
+	section > div > div {
+		width: 100%;
+		height: 5em;
+    }
+
+    section > div:hover > div {
+		margin-top: 220px;
+    }
+
+	section > div > div > p {
+		font-size: 16px ;
+	}
+}
+/*--------------------------------------------------------------------------*/
+/*-------------------------------SECTION------------------------------------*/
+
+
+
+/*Ecran large*/
+/*--------------------------------------------------------------------------*/
+@media(min-width: 750px) {
+
+}
+
+/*Ecran petit*/
+/*--------------------------------------------------------------------------*/ 
+@media (max-width: 750px) {
+
+
+}
+
+
+
+/*Parametres généraux*/
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+
+

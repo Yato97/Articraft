@@ -1,0 +1,319 @@
+/*-------------------------------FONTS--------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700');
+@import url('https://fonts.googleapis.com/css?family=Laila');
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+
+/*--------------------------------------------------------------------------*/
+/*-------------------------------FONTS--------------------------------------*/
+
+
+
+/*-------------------------------MAIN---------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+
+
+/*Parametres généraux*/
+/*--------------------------------------------------------------------------*/
+
+main {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: gray;
+}
+
+main > div > h1 {
+	color: white ;
+	margin: auto;
+	font-family:  'Amatic SC', serif;
+	font-size: 40px;
+	text-align: center;
+	padding-top: 200px;
+}
+
+main > div > p {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	padding-top: 100px;
+	padding: 0px 10px;
+}
+
+main > div {
+	z-index: 20;
+}
+
+/*--------------------------------------------------------------------------*/
+
+
+
+/*Ecran large*/
+/*--------------------------------------------------------------------------*/
+@media(min-width: 750px) {
+
+	main {
+		height: 95vh;
+	}
+}
+
+/*Ecran petit*/
+/*--------------------------------------------------------------------------*/ 
+@media (max-width: 750px) {
+	main {
+		height: 100vh;
+	}
+}
+
+
+/*--------------------------------------------------------------------------*/
+/*-------------------------------MAIN---------------------------------------*/
+
+
+
+
+/*-------------------------------SECTION------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+
+/*Parametres généraux*/
+/*--------------------------------------------------------------------------*/
+p {
+	margin:0em;
+}
+
+section  ul {
+	margin:0em;
+}
+
+li { list-style: white; }
+
+section  p {
+	color: white ;
+	padding: 0px 40px;
+	font-family: 'Old Standard TT', serif;
+}
+
+section > div:hover div {
+	opacity: 1;
+}
+
+section > div > div {
+	
+	background-color: rgba(70,70,80,0.6);
+	position: absolute;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 600ms;
+	box-sizing: border-box;
+	border: 1px solid white;
+}
+
+section > div > img {
+	position: absolute;
+	object-fit: cover; 
+} 
+
+/*--------------------------------------------------------------------------*/
+
+/*Ecran large*/
+/*--------------------------------------------------------------------------*/
+@media(min-width: 750px) {
+	section {
+		display: flex;
+		width: 100%;
+		height: 70vh;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+
+	section > div {
+		flex: 1 0 0;
+		width: 50%;
+	}
+
+	section > div > img{
+		width: 50%;
+		height: 70vh;
+	} 
+
+	section > div > div {
+		width: 50%;
+		height: 70vh;
+	}
+
+	section > div > div > ul {
+		display: flex;
+		flex-direction: column;
+		padding: 0px;
+		width: 100%;
+		height: 100%;
+	}
+
+	section  ul {
+		list-style: none;
+		width: 100%;
+		height: 100%;
+	    justify-content: center;
+	}
+
+	section ul li {
+		width: 100%;
+		padding-top: 20px;
+	}
+
+	section  p {
+		line-height: 2;
+		font-size: 18px;
+	}
+
+}
+
+/*Ecran petit*/
+/*--------------------------------------------------------------------------*/ 
+@media (max-width: 750px) {
+	section {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	section > div {
+		height:300px; 
+	}
+
+	section > div > img {
+		width: 100%;
+		height: 300px;
+	} 
+
+	section > div > div {
+		width: 100%;
+		height: 300px;
+	}
+
+	section > div > div > ul {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		padding: 0px;
+		width: 100%;
+		height: 100%;
+	}
+
+	section ul li {
+		flex: 1 0 0;
+		padding: 10px;
+	}
+
+	section > div:active div {
+		opacity: 1;
+	}
+
+	section p {
+		padding: 5px 20px;
+		font-size: 17px;
+		text-align: center;
+
+	}
+}
+/*--------------------------------------------------------------------------*/
+/*-------------------------------SECTION------------------------------------*/
+
+
+
+
+
+
+
+/*-------------------------------PARAGRAPHE---------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+/*Parametres généraux*/
+/*--------------------------------------------------------------------------*/
+#paragraphe > p {
+	font-family: 'Old Standard TT', serif;
+}
+
+#paragraphe {
+	display: flex;
+	width: 100%;
+	background-color: rgba(45,45,45,0.6);
+	position: relative;
+	align-items: center;
+}
+
+#paragraphe p {
+	text-align: center;
+	z-index: 20;
+	color: white;
+}
+
+/*--------------------------------------------------------------------------*/
+
+
+/*Ecran large*/
+/*--------------------------------------------------------------------------*/
+@media(min-width: 750px) {
+	#paragraphe {
+		height: 16vh;
+	}
+
+	#paragraphe p {
+		padding: 40px 20px;
+
+	}
+}
+
+/*Ecran petit*/
+/*--------------------------------------------------------------------------*/ 
+@media (max-width: 750px) {
+	#paragraphe {
+		height: 28vh;
+	}
+
+	#paragraphe p {
+		padding: 5px 20px;
+
+	}
+}
+
+
+/*Ecran très petit*/
+/*--------------------------------------------------------------------------*/ 
+@media (max-width: 380px) {	
+	#paragraphe {
+		height: 34vh;
+	}
+
+	#paragraphe p {
+		padding: 5px 15px;
+	}
+}
+
+
+/*--------------------------------------------------------------------------*/
+/*-------------------------------PARAGRAPHE---------------------------------*/
+
+
+
+
+
+
+
+/*-------------------------------FOND FIXED---------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+#fixed {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	object-fit: cover; 
+}
+
+/*--------------------------------------------------------------------------*/
+/*-------------------------------FOND FIXED---------------------------------*/
