@@ -145,7 +145,7 @@ span.toggle_icon:after{top:-10px;}
 
 	/*Bordure de 2 pixel*/
 	.submenu > li{
-		border-bottom: 2px solid #424558;
+		border-bottom: 2px solid #dde1f5;
 		transform: translateX(-10em);
 		opacity: 0;
 		transition: all 600ms;
@@ -390,7 +390,13 @@ span.toggle_icon:after{top:-10px;}
 footer {
 	display: flex;
 	width: 100%;
-	background-color: #45454D;
+	z-index: 2;
+	position: absolute;
+	background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    border: 1px solid rgba(255,255,255,0.18);
 }
 
 footer > div {

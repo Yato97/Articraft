@@ -123,7 +123,13 @@ h1 {
 	#titre{
 		width: 100%;
 		height: 3.6em;
-		background-color: #45454D;
+		position: absolute;
+		z-index: 2;
+		background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+		-webkit-backdrop-filter: blur(100px);
+		backdrop-filter: blur(10px);
+		box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+		border: 1px solid rgba(255,255,255,0.18);
 	}
 
 	#titre > h2{

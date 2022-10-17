@@ -57,7 +57,7 @@ main > div {
 @media(min-width: 750px) {
 
 	main {
-		height: 95vh;
+		height: 100vh;
 	}
 }
 
