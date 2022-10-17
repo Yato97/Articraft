@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700');
+@import url('https://fonts.googleapis.com/css?family=Laila');
+
+.overlay { /* POPUP */
+    display: none; /* On cache la popup (eventListener) */
+    position: fixed;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    height: auto;
+    left: 50%;
+    top: 50%;
+    margin-left: -24rem;
+    margin-top: 100em;
+    z-index:1;
+    opacity: 1;
+}
+
+.sub { /*Centrer le contenue dans la popup */
+    padding: 2rem;
+    height: 0%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 20px;
+
+}
+
+/* -----------------------------------------Titre h1--------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+.h1Overlay {
+    font-family: 'Laila' , serif;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: white;
+}
+/* ---------------------------------------------------------------------------------------------- */
+/* -----------------------------------------Titre h1--------------------------------------------- */
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* -----------------------------------------Formulaire------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+#formOverlay {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30rem;
+    height:29em;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+#formOverlay .textArea {
+    width: 100%;
+    height: 40px;
+}
+
+ 
+/* form input[type="text"] {
+    padding-left: 20px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: 0;
+}
+
+form input[type="date"] {
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: 0;
+} */
+
+.containerDiv { /* ligne */
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    outline: none;
+}
+
+.containerDiv input { 
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgb(213, 222, 232);
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+.containerDiv > span { 
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 28px;
+    pointer-events: none;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 1);
+    transition: all 500ms;
+    border-radius: 20px;
+    font-family: 'Amatic SC', serif;
+}
+.containerDiv input:valid ~ span,
+.containerDiv input:focus ~ span {
+    color: white;
+    transform: translateX(10px);
+    padding: 0 10px;
+    margin-left: 15px;
+    border-left: 1px solid rgb(213, 222, 232);
+    border-right: 1px solid rgb(213, 222, 232);
+    letter-spacing: 0.1em;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    border: 1px solid rgba(255,255,255,0.18);
+    background : rgb(43, 40, 40);
+}
+
+.containerDiv input:focus {
+    box-shadow: inset 0 0 0.20em white, 0 0 8em white;
+}
+
+
+.containerDiv > label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+.containerDiv > P {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+}
+.buttonControl {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-top: 1.5em;
+    margin-right: auto;
+    font-weight: bold;
+    color: #eee;
+    text-transform: uppercase;
+    height: 3rem;
+    width:10rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgb(213, 222, 232);
+    font-family: 'Laila' , serif;
+}
+
+.buttonControl:hover {
+    box-shadow: inset 0 0 0.6em white, 0 0 1em white;
+    transition: all;
+    transition-duration: 500ms;
+}
+/* ---------------------------------------------------------------------------------------------- */
+/* -----------------------------------------Formulaire------------------------------------------- */
+
+.closeSvg {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    top: 1%;
+    left: 95%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.closeSvg > .fa-solid {
+    margin-top: 0.2em;
+    font-size: 1.5em;
+    color: dimgrey;
+    width: 100%;
+    height: 100%;
+    transition: all 500ms;
+}
+
+.closeSvg:hover .fa-solid {
+    color: white;
+    text-shadow: white 1px 0 10px;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* -----------------------------------------Bouton overlay--------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------------------------- */
+/* -----------------------------------------Bouton overlay--------------------------------------- */
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* -----------------------------------------Barre de chargement---------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+.lua {
+    height: 2rem;
+    width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: 20px;
+}
+
+#labelCrypt {
+    display: none;
+}
+
+.luaIn {
+    border-radius: 20px;
+    width: 0%;
+    height: 100%;
+    background-color: tomato;
+}
+
+#pct { /* label % */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    display: block;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1em;
+    color: white;
+    z-index: 1;
+    text-align: center;
+}
+/* ---------------------------------------------------------------------------------------------- */
+/* -----------------------------------------Barre de chargement---------------------------------- */
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+

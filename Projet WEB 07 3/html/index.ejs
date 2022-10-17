@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>SignIn</title>
+    </head>
+
+    <body>
+        <h1 style="text-align: center;">Page du sérious game : </h1>
+
+        <!-- -----------------------------------TO IMPORT------------------------------------- -->
+        <!-- --------------------------------------------------------------------------------- -->
+        <button class="buttonControl">Affiche popup</button>
+        <div id="overlay">
+            <div class="sub">
+                <h1 class="h1Overlay">Remplissez le formulaire :</h1>
+
+                <form id="formOverlay" action="/" method="post">
+                    <div class="containerDiv">
+                        <input class="textArea" type="text" id="num" name="num" placeholder="Numéro étudiant" >
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="text" id="nom" name="nom" placeholder="Nom" >
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="text" id="prenom" name="prenom" placeholder="Prénom" >
+                    </div>
+                    <div class="containerDiv">
+                        <p style="text-align: center;">Date de naissance</p>
+                        <input class="textArea" type="date" id="date" name="date">
+                        
+                    </div>
+                    <div class="btn">
+                        <input class="buttonControl" id="generate" type="submit" value="Generate">
+                        <button id="result" class="buttonControl"><a style="text-decoration: none; color: white; width: 100%; height: 100%; display: inline-block; text-align: center; margin-top: 1.1em;" href="files/clé.txt" download="CLé crypté">Download</a></button>
+                    </div>
+                </form>
+                
+
+                <div class="lua">
+                    <div class="luaIn"><p id="pct"></p></div>
+                </div>
+
+
+                <div>
+                    <!-- <h1 id="labelCrypt" class="h1Overlay">Clé crypté :</h1> -->
+                    <!-- <p id="result"></p> -->
+                </div>  
+
+            </div>
+        </div>
+        
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/popup.js"></script>
+        <!-- --------------------------------------------------------------------------------- -->
+        <!-- -----------------------------------TO IMPORT------------------------------------- -->
+    </body>
+</html>

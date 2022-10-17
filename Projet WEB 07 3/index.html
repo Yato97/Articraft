@@ -3,41 +3,40 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Visiris</title>
+        <title>Articraft</title>
         <link rel="stylesheet" type="text/css" href="styles/main.css">
         <link rel="stylesheet" type="text/css" href="styles/general.css">
         <link rel="stylesheet" type="text/css" href="styles/menubar2.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <link rel="shortcut icon" type="image/png" href="images/favicone/main.ico"/>
+        <link rel="shortcut icon" type="image/png" href="images/favicone/logo.svg"/>
+        <link rel="stylesheet" href="styles/popup.css">
+        <script src="https://kit.fontawesome.com/10e13df78c.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
 
     	<!--Menubar-->
-    	<nav id="nav1">
+    	<nav>
     		<ul class="open">
     			<li id="menu1"><a href="#"><i class="fas fa-home"></i></a></li>
                 
-
+                <div id="sep1" class="separator"></div>
                 
-        		<li class="lix"><a href="#">Randonnèes</a>
+        		<li class="lix"><a href="#">Boutique</a>
         			<ul class="submenu">
-        				<li><a href="html/pages1.html">France</a></li>
-    					<li><a href="html/pages2.html">Gréce</a></li>
+        				<li><a href="html/pages1.html">Catalogue</a></li>
     				</ul>        			
                 </li>
+                
+                <div id="sep2" class="separator"></div>
 
-        		<li class="lix"><a href="#">Plongèes</a>
+        		<li id="sp" class="lix"><a href="#">Mon compte</a>
         			<ul class="submenu">
-    					<li><a href="html/pages3.html">Australie</a></li>
-    					<li><a href="html/pages4.html">Afrique</a></li>
-                    </ul>
-        		</li>
-        		<li id="sp" class="lix"><a href="#">Sports d'hiver</a>
-        			<ul class="submenu">
-        				<li><a href="html/pages5.html">France</a></li>
-    					<li><a href="html/pages6.html">Canada</a></li>
+        				<li class="buttonControlIns"><a href="#">Connection</a></li>
+    					<li class="buttonControlIns"><a href="#">Inscription</a></li>
+                        <li><a href="html/pages6.html">Profile</a></li>
+                        <li><a href="html/pages6.html">Mes commandes</a></li>
     				</ul>
     			</li>
 
@@ -63,22 +62,19 @@
                 
 
                     <div id="slideshow">
-                        <img src="images/Diapo/img1.png" alt="Images1" class="images">
+                        
                         <img src="images/Diapo/img2.png" alt="Images2" class="images">
-                        <img src="images/Diapo/img3.png" alt="Images3" class="images">
-                        <img src="images/Diapo/img4.png" alt="Images4" class="images">
-                        <img src="images/Diapo/img5.png" alt="Images5" class="images">
-                        <img src="images/Diapo/img6.png" alt="Images6" class="images">
+
                         <img src="images/Diapo/img7.png" alt="Images6" class="images">
 
-                        <h1>Découvrez, choisissez, voyagez.</h1>
+                        <h1>Articraft</h1>
                   </div>
             </div>  
         </div>
 
         <!--Zone de texte-->
         <div id="titre">
-            <h2>Pourquoi ne pas vous laisser tenter ?</h2>
+            <h2>Description de nos variantes</h2>
         </div>
 
     	<!--Flexbox-->
@@ -136,9 +132,100 @@
             </div>
     	</footer>
 
-        <script src="js/menu.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/ping.js"></script>
+        <!-- -----------------------------------INSCRIPTION------------------------------------- -->
+        <!-- --------------------------------------------------------------------------------- -->
+        <div class="overlay">
+            <div class="sub">
+                <h1 class="h1Overlay">Formulaire d'inscription :</h1>
+
+                <form id="formOverlay" action="/" method="post">
+                    <span class="closeSvg"><i class="fa-solid fa-xmark"></i></span>
+                    <div class="containerDiv">
+                        <input class="textArea" type="text" id="nomInc" name="nom" required="required">
+                        <span>Nom</span>
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="text" id="prenomInc" name="prenom" required="required">
+                        <span>Prenom</span>
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="text" id="emailInc" name="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="password" id="passwdInc" name="passwd" required="required">
+                        <span>Mot de passe</span>
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="text" id="addr" name="addr" required="required">
+                        <span>Adresse</span>
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="date" id="date" name="date" required="required">
+                        <span style="margin-left: 60%">Date de naissance</span>
+                        
+                    </div>
+                    <div class="btn">
+                        <input class="buttonControl" id="generate" type="submit" value="Enregistrer">
+                        <input class="buttonControl" id="redirectConnect" type="submit" value="Connection">
+                    </div>
+                </form>
+                
+
+                <div class="lua">
+                    <div class="luaIn"><p id="pct"></p></div>
+                </div>
+
+
+                <div>
+                    <!-- <h1 id="labelCrypt" class="h1Overlay">Clé crypté :</h1> -->
+                    <!-- <p id="result"></p> -->
+                </div>  
+
+            </div>
+        </div>
+
+
+        <!-- -----------------------------------CONNECTION------------------------------------- -->
+        <!-- --------------------------------------------------------------------------------- -->
+        <div class="overlay">
+            <div class="sub">
+                <h1 class="h1Overlay">Formulaire de connection :</h1>
+
+                <form style="height: 13em;" id="formOverlay" action="/" method="post">
+                    <span class="closeSvg"><i class="fa-solid fa-xmark"></i></span>
+                    <div class="containerDiv">
+                        <input class="textArea" type="text" id="email" name="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="password" id="passwd" name="passwd" required="required">
+                        <span>Mot de passe</span>
+                    </div>
+                    <div class="btn">
+                        <input class="buttonControl" id="connect" type="submit" value="Connection">
+                        <input class="buttonControl" id="gen" type="submit" value="Mot de passe oublié">
+                    </div>
+                </form>
+                
+
+                <div class="lua">
+                    <div class="luaIn"><p id="pct"></p></div>
+                </div>
+
+
+                <div>
+                    <!-- <h1 id="labelCrypt" class="h1Overlay">Clé crypté :</h1> -->
+                    <!-- <p id="result"></p> -->
+                </div>  
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/ping.js"></script>
+        <script type="text/javascript" src="js/popup.js"></script>
 
 
     </body>
