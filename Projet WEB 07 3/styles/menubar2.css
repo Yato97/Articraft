@@ -4,12 +4,20 @@
 	
 	/*Met le background uniquement sur la page d'acceuil*/ 
 	nav > ul {
-		background: #424558;
+		background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+		border: 1px solid rgba(255,255,255,0.18);
 	}
 
 	/*Met le background uniquement sur la page d'acceuil*/ 
 	.submenu {
-		background-color: #424558;
+		background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+		-webkit-backdrop-filter: blur(100px);
+		backdrop-filter: blur(10px);
+		box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+		border: 1px solid rgba(255,255,255,0.18);
 
 	}
 	

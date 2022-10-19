@@ -163,11 +163,9 @@ span.toggle_icon:after{top:-10px;}
 /*--------------------------------------------------------------------------*/ 
 @media (max-width: 750px) {
 
-	
-
 	nav { position: absolute;
 		z-index: 30;
-
+		height: 3em;
 	}
 
 	nav > ul {
@@ -227,7 +225,11 @@ span.toggle_icon:after{top:-10px;}
 		flex: 1 0 0;
 		padding-top: 10px;
 		padding-bottom: 15px;
-		border-bottom: 2px solid #424558;
+		background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+		-webkit-backdrop-filter: blur(100px);
+		backdrop-filter: blur(10px);
+		box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+		border: 1px solid rgba(255,255,255,0.18);
 	}
 
 	.submenu > li:hover a {
