@@ -1,1 +1,4 @@
 # Articraft
+```bash
+npm i
+```
