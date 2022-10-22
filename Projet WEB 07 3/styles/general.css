@@ -24,7 +24,7 @@ nav  a {
 
 /*Couleur de fond + largeur max*/
 nav {
-	width: 100%;
+	width: 99.75%;
 }
 
 /*Supprime les puces*/
@@ -45,9 +45,6 @@ nav > ul::after {
 	clear: both;
 }
 
-nav{
-	width: 100%;
-}
 
 .toggle {
 	display: none;
@@ -391,7 +388,7 @@ span.toggle_icon:after{top:-10px;}
 /*Pied de page déjà responsive*/
 footer {
 	display: flex;
-	width: 100%;
+	width: 99.75%;
 	z-index: 2;
 	position: absolute;
 	background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));

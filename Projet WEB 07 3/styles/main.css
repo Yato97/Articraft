@@ -121,7 +121,7 @@ h1 {
 /*--------------------------------------------------------------------------*/
 @media(min-width: 750px) {
 	#titre{
-		width: 100%;
+		width: 99.75%;
 		height: 3.6em;
 		position: absolute;
 		z-index: 2;

@@ -1,0 +1,53 @@
+#panier-ico {
+    position: fixed;
+    right: 2%;
+    top: 3.5em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    border: 1px solid rgba(255,255,255,0.18);
+    align-items: center;
+    transition: all 1s;
+}
+
+#icocontainer  > i {
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 25%;
+    color: white;
+}
+
+#icocontainer {
+    position: fixed;
+    right: 3%;
+    top: 3.8em;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    background-color: aqua;
+    align-items: center;
+    transition: all 1s;
+}
+
+#panier-ico > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0.3em;
+    margin-left: 0.3em;
+    padding: 0;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    background-color: aqua;
+    color: white;
+}
+
+#icocontainer:hover #panier-ico  {
+    transform: rotateX(180deg);
+    width: 100%;
+}
