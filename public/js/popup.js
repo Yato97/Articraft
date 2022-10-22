@@ -81,7 +81,7 @@ async function resetOverlay(index) {
 }
 
 //Evenement sur le bouton 
-but.addEventListener("click", maFct3, false);
+// but.addEventListener("click", maFct3, false);
 buttonControlIns.addEventListener("click", affichePopUp.bind(null,1), false);
 buttonControlCon.addEventListener("click", affichePopUp.bind(null,0), false);
 closerArr[0].addEventListener("click", resetOverlay.bind(null,0), false);

@@ -142,36 +142,35 @@
             <div class="sub">
                 <h1 class="h1Overlay">Formulaire d'inscription :</h1>
 
-                <form id="formOverlay" action="/" method="post">
+                <form id="formOverlay" action="/api/users" method="post">
                     <span class="closeSvg"><i class="fa-solid fa-xmark"></i></span>
                     <div class="containerDiv">
-                        <input class="textArea" type="text" id="nomInc" name="nom" required="required">
+                        <input class="textArea" type="text" name="username" required="required">
                         <span>Nom</span>
                     </div>
                     <div class="containerDiv">
-                        <input class="textArea" type="text" id="prenomInc" name="prenom" required="required">
+                        <input class="textArea" type="text" name="prenom" required="required">
                         <span>Prenom</span>
                     </div>
                     <div class="containerDiv">
-                        <input class="textArea" type="text" id="emailInc" name="email" required="required">
+                        <input class="textArea" type="text" name="email" required="required">
                         <span>Email</span>
                     </div>
                     <div class="containerDiv">
-                        <input class="textArea" type="password" id="passwdInc" name="passwd" required="required">
+                        <input class="textArea" type="password" name="password" required="required">
                         <span>Mot de passe</span>
                     </div>
                     <div class="containerDiv">
-                        <input class="textArea" type="text" id="addr" name="addr" required="required">
+                        <input class="textArea" type="text" name="addr" required="required">
                         <span>Adresse</span>
                     </div>
                     <div class="containerDiv">
-                        <input class="textArea" type="date" id="date" name="date" required="required">
+                        <input class="textArea" type="date" name="datenaissance" required="required">
                         <span style="margin-left: 60%">Date de naissance</span>
                         
                     </div>
                     <div class="btn">
                         <input class="buttonControl" id="generate" type="submit" value="Enregistrer">
-                        <input class="buttonControl" id="redirectConnect" type="submit" value="Connection">
                     </div>
                 </form>
                 
@@ -199,11 +198,11 @@
                 <form style="height: 13em;" id="formOverlay" action="/" method="post">
                     <span class="closeSvg"><i class="fa-solid fa-xmark"></i></span>
                     <div class="containerDiv">
-                        <input class="textArea" type="text" id="email" name="email" required="required">
+                        <input class="textArea" type="text" name="email" required="required">
                         <span>Email</span>
                     </div>
                     <div class="containerDiv">
-                        <input class="textArea" type="password" id="passwd" name="passwd" required="required">
+                        <input class="textArea" type="password" name="password" required="required">
                         <span>Mot de passe</span>
                     </div>
                     <div class="btn">
