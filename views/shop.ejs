@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Articraft</title>
+        <title>Articraft - Boutique</title>
         <link rel="stylesheet" type="text/css" href="styles/main.css">
         <link rel="stylesheet" type="text/css" href="styles/general.css">
         <link rel="stylesheet" type="text/css" href="styles/menubar2.css">
@@ -16,6 +16,7 @@
     </head>
 
     <body>
+        
         <div>
         <div id="icocontainer"><i class="fa-solid fa-cart-shopping"></i></div>
         <div class="parentpanierwrapper">
@@ -94,7 +95,7 @@
     	<!--Menubar-->
     	<nav>
     		<ul class="open">
-    			<li id="menu1"><a href="#"><i class="fas fa-home"></i></a></li>
+    			<li id="menu1"><a href="/"><i class="fas fa-home"></i></a></li>
                 
                 <div id="sep1" class="separator"></div>
                 
@@ -125,30 +126,58 @@
 
     	</nav>
 
+
         
 
-    	<div id="space">
-    		
-    	</div>
-        
-        <div id="diapo">
-        	<!--Diaporama-->
-            <div id="slideshow-container">
-                
-
-                    <div id="slideshow">
-                        
-                        <img src="images/Diapo/img2.png" alt="Images2" class="images">
-
-                        <img src="images/Diapo/img7.png" alt="Images6" class="images">
-
-                        <h1>Articraft</h1>
-                  </div>
-            </div>  
+        <!--Zone de texte-->
+        <div id="titre">
+            <h2>Catalogue des produits</h2>
         </div>
 
-       
 
+        <!--Flexbox-->
+    <div class="shopcontainer">
+            <div class="item">
+                <div class="fade">
+                    <form class="formPanier" action="/api/users" method="post">
+                        <div class="containerDivbis">
+                            <input type="hidden" class="textAreabis" name="qteVar" required="required" value="OKOK">
+                        </div>
+                        <div class="containerDivbis" class="qte">
+                            <p>Quantité désiré :</p>
+                            <input type="number" class="textAreabis" name="qteVar" required="required">
+                        </div>
+
+                        <input class="buttonAddPanier" type="submit" value="Ajouter au panier">
+                </div>
+                <img alt="images-paysages" src="images/lacmontagne.png">
+            </div>
+
+            <div class="item">
+                <div class="fade"><p>Silence et vastes étendues, pour les aventuriers.</p></div>
+                <img alt="images-paysages" src="images/dezert.png">
+            </div>
+
+            <div class="item">
+                <div class="fade"><p>Domaines forestiers et parcs végétaux, pour les amoureux de nature.</p></div>
+                <img alt="images-paysages" src="images/parck.png">
+            </div>
+            <div class="item">
+                <div class="fade"><p>Fraîcheur, sports d'hiver, altitude: la neige vous attend.</p></div>
+                <img alt="images-paysages" src="images/hivers.png">
+            </div>
+
+            <div class="item">
+                <div class="fade"><p>Besoin de soleil et de vacances, les îles paradisiaques sont faites pour vous.</p></div>
+                <img alt="images-paysages" src="images/palliote.png">
+            </div>
+
+            <div class="item">
+                <div class="fade"><p>Les plages, l'océan à perte de vue, optez pour la bronzette.</p></div>
+            <img alt="images-paysages" src="images/sunset.png">
+            </div>
+    </div>
+    <img style="height : 100%;width:100%; position: absolute;top:0;z-index:-1;" alt="images-paysages" src="images/Diapo/fond.jpg">
 
 
 
@@ -168,7 +197,6 @@
                 </div>
             </div>
     	</footer>
-        <img style="height : 9em; object-fit: none; position: absolute;" alt="images-paysages" src="images/Fond/winter.png">
         <!-- -----------------------------------INSCRIPTION------------------------------------- -->
         <!-- --------------------------------------------------------------------------------- -->
         <div class="overlay">

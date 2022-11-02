@@ -13,8 +13,9 @@ var clientController = require('./controllers/client');
 
 
 var productController = require('./controllers/product');
+const { request } = require('express');
 // Connect to the beerlocker MongoDB
-mongoose.connect('mongodb://localhost:27017/Articraft');
+// mongoose.connect('mongodb://localhost:27017/Articraft');
 
 // Create our Express application
 var app = express();
@@ -46,9 +47,14 @@ router.route('/api/product')
   .post(productController.postProduct)
   .get(productController.getProducts);
 
-  app.get('/', (req, res) => {
+let url = request.url;
+app.get('/', (req, res) => {
     res.render('index')
- });
+});
+app.get('/shop', (req, res) => {
+  res.render('shop')
+});
+
 
 
 // // Create endpoint handlers for /beers

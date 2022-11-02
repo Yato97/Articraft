@@ -108,6 +108,8 @@ h1 {
 #titre > h2{
 	font-family: 'Laila' , serif;
 	text-align: center;
+	position: relative;
+	margin-top: 3em;
 	margin: 0em;
     color: white;
     opacity: 0.8;
@@ -121,10 +123,11 @@ h1 {
 /*--------------------------------------------------------------------------*/
 @media(min-width: 750px) {
 	#titre{
-		width: 99.75%;
-		height: 3.6em;
-		position: absolute;
-		z-index: 2;
+		width: 100%;
+		height: 15em;
+		margin-top: 3em;
+		position: relative;
+		z-index: 0;
 		background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
 		-webkit-backdrop-filter: blur(100px);
 		backdrop-filter: blur(10px);
@@ -174,29 +177,51 @@ img {
 	height: 100%;
 	object-fit: cover;
 }
-
-section {
+#header {
+	height: 6.7em;
+	background-image: url("../images/Fond/fond.png");;
+}
+.shopcontainer {
+	position: relative;
+	width: 100%;
+	height: 50em;
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex:1 1 2;
 }
 
-section > div > div {
-	background-color: rgba(70,70,80,0.7);
+.shopcontainer > div {
+	display: block;
+	width: 33.33%;
+	height: 25em;
+}
+
+.shopcontainer > div > div {
+	display: inline-block;
 	position: absolute;
-	opacity: 0;
-	transition-property: opacity, margin-top;
-	transition-duration: 600ms;
+	width: 33.33%;
+	height: 0em;
+	margin-top: 16em;
+	background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+	-webkit-backdrop-filter: blur(100px);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+	transition: all 500ms;
 }
 
-section > div:hover > div {
-	opacity: 1;
+.shopcontainer > div:hover > div {
+	height: 9em;
+
 }
 
-section > div > div > p {
-	font-family: 'Old Standard TT', serif;
-	color: white;
-	text-align: center;
+.formPanier {
+	width: 100%;
 }
 
+.qte {
+	width: 3em;
+}
 /*--------------------------------------------------------------------------*/
 
 
@@ -205,30 +230,7 @@ section > div > div > p {
 /*Ecran large*/
 /*--------------------------------------------------------------------------*/
 @media(min-width: 800px) {
-	/*Prend toute la largeur + 40vh + 20vh footer : remplis la page*/
-	section {
-		width: 100%;
-		height: 40vh;
-		box-sizing: border-box;
-		border: 1px solid #424558;
-	}
 
-	section > div {
-		flex: 1 0 0;
-		border-right: 1px solid #424558;
-	}
-
-	/*Affiche une barre d'info effet slide de haut en bas + opacity de 0 a 0.5*/
-	section > div > div {
-		width: 33.33%;
-		height: 13%;
-		margin-top: 27vh;
-
-	}
-
-	section > div > div > p {
-		font-size: 17px ;
-	}
 }
 
 
@@ -237,27 +239,6 @@ section > div > div > p {
 /*--------------------------------------------------------------------------*/ 
 @media (max-width: 800px) {
 
-	section {
-		flex-direction: column;
-	}
-
-	section > div {
-		width: 100%;
-		height: 300px;
-	}
-
-	section > div > div {
-		width: 100%;
-		height: 5em;
-    }
-
-    section > div:hover > div {
-		margin-top: 220px;
-    }
-
-	section > div > div > p {
-		font-size: 16px ;
-	}
 }
 /*--------------------------------------------------------------------------*/
 /*-------------------------------SECTION------------------------------------*/
