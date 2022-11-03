@@ -21,70 +21,11 @@
         <div id="icocontainer"><i class="fa-solid fa-cart-shopping"></i></div>
         <div class="parentpanierwrapper">
             <div class="panierbox">
-                <div class="itempanier">
-                    <span class="closeSvgPanier"><i class="fa-solid fa-xmark"></i></span>
-                    <div class="imgitempanier"><img src="images/hivers.png" alt="#"></div>
-                    <div class="txtitempanier">
-                        <p>Titre du produit</p>
-                        <div><p>Quantité : </p> <p class="qteproduit">10</p></div>
-                        <div><p>Couleur : </p> <p class="colproduit">Marron</p></div>
-                        <div><p>Total : </p> <p class="prixproduit">150€</p></div>
-                    </div>
-                </div>
-                <div class="itempanier">
-                    <span class="closeSvgPanier"><i class="fa-solid fa-xmark"></i></span>
-                    <div class="imgitempanier"><img src="images/parck.png" alt="#"></div>
-                    <div class="txtitempanier">
-                        <p>Titre du produit</p>
-                        <div><p>Quantité : </p> <p class="qteproduit">2</p></div>
-                        <div><p>Couleur : </p> <p class="colproduit">Jaune</p></div>
-                        <div><p>Total : </p> <p class="prixproduit">50€</p></div>
-                    </div>
-                </div>
-                <div class="itempanier">
-                    <span class="closeSvgPanier"><i class="fa-solid fa-xmark"></i></span>
-                    <div class="imgitempanier"><img src="images/palliote.png" alt="#"></div>
-                    <div class="txtitempanier">
-                        <p>Titre du produit</p>
-                        <div><p>Quantité : </p> <p class="qteproduit">2</p></div>
-                        <div><p>Couleur : </p> <p class="colproduit">Rouge</p></div>
-                        <div><p>Total : </p> <p class="prixproduit">250€</p></div>
-                    </div>
-                </div>
-                <div class="itempanier">
-                    <span class="closeSvgPanier"><i class="fa-solid fa-xmark"></i></span>
-                    <div class="imgitempanier"><img src="images/hivers.png" alt="#"></div>
-                    <div class="txtitempanier">
-                        <p>Titre du produit</p>
-                        <div><p>Quantité : </p> <p class="qteproduit">10</p></div>
-                        <div><p>Couleur : </p> <p class="colproduit">Marron</p></div>
-                        <div><p>Total : </p> <p class="prixproduit">150€</p></div>
-                    </div>
-                </div>
-                <div class="itempanier">
-                    <span class="closeSvgPanier"><i class="fa-solid fa-xmark"></i></span>
-                    <div class="imgitempanier"><img src="images/parck.png" alt="#"></div>
-                    <div class="txtitempanier">
-                        <p>Titre du produit</p>
-                        <div><p>Quantité : </p> <p class="qteproduit">2</p></div>
-                        <div><p>Couleur : </p> <p class="colproduit">Jaune</p></div>
-                        <div><p>Total : </p> <p class="prixproduit">50€</p></div>
-                    </div>
-                </div>
-                <div class="itempanier">
-                    <span class="closeSvgPanier"><i class="fa-solid fa-xmark"></i></span>
-                    <div class="imgitempanier"><img src="images/palliote.png" alt="#"></div>
-                    <div class="txtitempanier">
-                        <p>Titre du produit</p>
-                        <div><p>Quantité : </p> <p class="qteproduit">2</p></div>
-                        <div><p>Couleur : </p> <p class="colproduit">Rouge</p></div>
-                        <div><p>Total : </p> <p class="prixproduit">250€</p></div>
-                    </div>
-                </div>
+                
  
                 <div class="itemoption">
                     <h2>Devis</h2>
-                    <p id="totalpanier">5000€</p>
+                    <p id="totalpanier">0</p>
                         <input class="inputpanier" type="submit" value="Valider la commande">
         
                 </div>
@@ -132,6 +73,7 @@
         <!--Zone de texte-->
         <div id="titre">
             <h2>Catalogue des produits</h2>
+            <p>Voici nos différentes variantes de notre produit incontournable, il est dispobible sous plusieurs colori dirrérents. Laissez vous tenter par la gamme unique Articraft</p>
         </div>
 
 
@@ -139,42 +81,102 @@
     <div class="shopcontainer">
             <div class="item">
                 <div class="fade">
-                    <form class="formPanier" action="/api/users" method="post">
-                        <div class="containerDivbis">
-                            <input type="hidden" class="textAreabis" name="qteVar" required="required" value="OKOK">
-                        </div>
-                        <div class="containerDivbis" class="qte">
-                            <p>Quantité désiré :</p>
-                            <input type="number" class="textAreabis" name="qteVar" required="required">
-                        </div>
-
-                        <input class="buttonAddPanier" type="submit" value="Ajouter au panier">
+                    <div class="containerDivbis">
+                        <p>Couleur : <strong class="color">Jaune</strong></p>
+                    </div>
+                    <div class="containerDivbis">
+                        <p>Prix : <strong class="prix">50</strong>€</p>
+                    </div>
+                    <div class="containerDivbis" class="qte">
+                        <p>Quantité désiré :</p>
+                        <input type="number" class="textAreabis" name="qteVar" required="required">
+                    </div>
+                    <button class="buttonAddPanier">Ajouter au panier</button>
                 </div>
-                <img alt="images-paysages" src="images/lacmontagne.png">
+                <img class="imgarticle" alt="images-paysages" src="images/lacmontagne.png">
             </div>
 
             <div class="item">
-                <div class="fade"><p>Silence et vastes étendues, pour les aventuriers.</p></div>
-                <img alt="images-paysages" src="images/dezert.png">
+                <div class="fade">
+                    <div class="containerDivbis">
+                        <p>Couleur : <strong class="color">Marron</strong></p>
+                    </div>
+                    <div class="containerDivbis">
+                        <p>Prix : <strong class="prix">100</strong>€</p>
+                    </div>
+                    <div class="containerDivbis" class="qte">
+                        <p>Quantité désiré :</p>
+                        <input type="number" class="textAreabis" name="qteVar" required="required">
+                    </div>
+                    <button class="buttonAddPanier">Ajouter au panier</button>
+                </div>
+                <img class="imgarticle" alt="images-paysages" src="images/dezert.png">
+            </div>
+            <div class="item">
+                <div class="fade">
+                    <div class="containerDivbis">
+                        <p>Couleur : <strong class="color">Vert</strong></p>
+                    </div>
+                    <div class="containerDivbis">
+                        <p>Prix : <strong class="prix">25</strong>€</p>
+                    </div>
+                    <div class="containerDivbis" class="qte">
+                        <p>Quantité désiré :</p>
+                        <input type="number" class="textAreabis" name="qteVar" required="required">
+                    </div>
+                    <button class="buttonAddPanier">Ajouter au panier</button>
+                </div>
+                <img class="imgarticle" alt="images-paysages" src="images/parck.png">
             </div>
 
             <div class="item">
-                <div class="fade"><p>Domaines forestiers et parcs végétaux, pour les amoureux de nature.</p></div>
-                <img alt="images-paysages" src="images/parck.png">
-            </div>
-            <div class="item">
-                <div class="fade"><p>Fraîcheur, sports d'hiver, altitude: la neige vous attend.</p></div>
-                <img alt="images-paysages" src="images/hivers.png">
+                <div class="fade">
+                    <div class="containerDivbis">
+                        <p>Couleur : <strong class="color">Bleu clair</strong></p>
+                    </div>
+                    <div class="containerDivbis">
+                        <p>Prix : <strong class="prix">65</strong>€</p>
+                    </div>
+                    <div class="containerDivbis" class="qte">
+                        <p>Quantité désiré :</p>
+                        <input type="number" class="textAreabis" name="qteVar" required="required">
+                    </div>
+                    <button class="buttonAddPanier">Ajouter au panier</button>
+                </div>
+                <img class="imgarticle" alt="images-paysages" src="images/hivers.png">
             </div>
 
             <div class="item">
-                <div class="fade"><p>Besoin de soleil et de vacances, les îles paradisiaques sont faites pour vous.</p></div>
-                <img alt="images-paysages" src="images/palliote.png">
+                <div class="fade">
+                    <div class="containerDivbis">
+                        <p>Couleur : <strong class="color">Rouge</strong></p>
+                    </div>
+                    <div class="containerDivbis">
+                        <p>Prix : <strong class="prix">125</strong>€</p>
+                    </div>
+                    <div class="containerDivbis" class="qte">
+                        <p>Quantité désiré :</p>
+                        <input type="number" class="textAreabis" name="qteVar" required="required">
+                    </div>
+                    <button class="buttonAddPanier">Ajouter au panier</button>
+                </div>
+                <img class="imgarticle" alt="images-paysages" src="images/palliote.png">
             </div>
-
             <div class="item">
-                <div class="fade"><p>Les plages, l'océan à perte de vue, optez pour la bronzette.</p></div>
-            <img alt="images-paysages" src="images/sunset.png">
+                <div class="fade">
+                    <div class="containerDivbis">
+                        <p>Couleur : <strong class="color">Violet</strong></p>
+                    </div>
+                    <div class="containerDivbis">
+                        <p>Prix : <strong class="prix">200</strong>€</p>
+                    </div>
+                    <div class="containerDivbis" class="qte">
+                        <p>Quantité désiré :</p>
+                        <input type="number" class="textAreabis" name="qteVar" required="required">
+                    </div>
+                    <button class="buttonAddPanier">Ajouter au panier</button>
+                </div>
+                <img class="imgarticle" alt="images-paysages" src="images/sunset.png">
             </div>
     </div>
     <img style="height : 100%;width:100%; position: absolute;top:0;z-index:-1;" alt="images-paysages" src="images/Diapo/fond.jpg">
@@ -197,6 +199,8 @@
                 </div>
             </div>
     	</footer>
+        <img style="height : 9em; object-fit: none; position: absolute;" alt="images-paysages" src="images/Fond/winter.png">
+
         <!-- -----------------------------------INSCRIPTION------------------------------------- -->
         <!-- --------------------------------------------------------------------------------- -->
         <div class="overlay">
@@ -206,27 +210,27 @@
                 <form id="formOverlay" action="/api/users" method="post">
                     <span class="closeSvg"><i class="fa-solid fa-xmark"></i></span>
                     <div class="containerDiv">
-                        <input class="textArea" type="text" name="username" required="required">
+                        <input style="padding: 16px;" class="textArea" type="text" name="username" required="required">
                         <span>Nom</span>
                     </div>
                     <div class="containerDiv">
-                        <input class="textArea" type="text" name="prenom" required="required">
+                        <input style="padding: 16px;" class="textArea" type="text" name="prenom" required="required">
                         <span>Prenom</span>
                     </div>
                     <div class="containerDiv">
-                        <input class="textArea" type="text" name="email" required="required">
+                        <input style="padding: 16px;" class="textArea" type="text" name="email" required="required">
                         <span>Email</span>
                     </div>
                     <div class="containerDiv">
-                        <input class="textArea" type="password" name="password" required="required">
+                        <input style="padding: 16px;" class="textArea" type="password" name="password" required="required">
                         <span>Mot de passe</span>
                     </div>
                     <div class="containerDiv">
-                        <input class="textArea" type="text" name="addr" required="required">
+                        <input style="padding: 16px;" class="textArea" type="text" name="addr" required="required">
                         <span>Adresse</span>
                     </div>
                     <div class="containerDiv">
-                        <input class="textArea" type="date" name="datenaissance" required="required">
+                        <input style="padding: 16px;" class="textArea" type="date" name="datenaissance" required="required">
                         <span style="margin-left: 60%">Date de naissance</span>
                         
                     </div>
@@ -288,7 +292,6 @@
     </div>
 
         <script type="text/javascript" src="js/menu.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/ping.js"></script>
         <script type="text/javascript" src="js/popup.js"></script>
         <script type="text/javascript" src="js/panier.js"></script>
