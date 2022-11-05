@@ -61,6 +61,6 @@ exports.deleteProduct = function(req, res) {
     if (err)
       return res.send(err);
 
-    res.json({ message: 'product removed from the locker!' });
+    res.json({ message: 'product removed' });
   });
 };

@@ -10,6 +10,8 @@ const imgS = document.getElementsByClassName("imgarticle");
 const prix = document.getElementsByClassName("prix");
 const color = document.getElementsByClassName("color");
 
+// const buttonPanier = document.getElementsByClassName("inputpanier")[0];
+
 var isDisplay = false;
 
 function affichePopUp() { //  Affiche le popup
@@ -117,3 +119,6 @@ for (let index = 0; index < addPanier.length; index++) {
     const element = addPanier[index];
     element.addEventListener("click", addCart.bind(null, index), false);
 }
+
+
+

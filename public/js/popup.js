@@ -15,6 +15,8 @@ const textInput = document.getElementsByClassName("textArea");
 const date = document.getElementById("date");
 const sub = document.getElementsByClassName("sub");
 
+
+const buttonPanier = document.getElementsByClassName("inputpanier")[0];
 var index = 0;
 
 //On met une animation pour le remplissage de la barre de chargement 
@@ -58,8 +60,9 @@ function temp() { // Animation du bouton Download
 }
 
 function affichePopUp(index) { //  Affiche le popup
-    if (index === 0) {overlay = overlayArr[index]; subOverlay = sub[index]; resetOverlay(1);}
-    if (index === 1) {overlay = overlayArr[index]; subOverlay = sub[index]; resetOverlay(0);}
+    if (index === 0) {overlay = overlayArr[index]; subOverlay = sub[index]; resetOverlay(1);resetOverlay(2);}
+    if (index === 1) {overlay = overlayArr[index]; subOverlay = sub[index]; resetOverlay(0);resetOverlay(2);}
+    if (index === 2) {overlay = overlayArr[index]; subOverlay = sub[index]; resetOverlay(0);resetOverlay(1);}
     overlay.style.display="block";
     setTimeout(opacity, 50)
 }
@@ -84,5 +87,7 @@ async function resetOverlay(index) {
 // but.addEventListener("click", maFct3, false);
 buttonControlIns.addEventListener("click", affichePopUp.bind(null,1), false);
 buttonControlCon.addEventListener("click", affichePopUp.bind(null,0), false);
+buttonPanier.addEventListener("click", affichePopUp.bind(null,2), false);
 closerArr[0].addEventListener("click", resetOverlay.bind(null,0), false);
 closerArr[1].addEventListener("click", resetOverlay.bind(null,1), false);
+closerArr[2].addEventListener("click", resetOverlay.bind(null,2), false);
