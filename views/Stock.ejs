@@ -14,32 +14,31 @@
         <nav id="header">
             <h1>Administration</h1>
             <div>
-                <a href="commandes">Commandes</a>
-                <a href="stock">Stock</a>
+                <a href="Stock">Commandes</a>
+                <a href="Admin">Stock</a>
             </div>
         </nav>
 
 
-        <h1 id="addtitle">Ajouter un produit</h1>
+        <h1 id="addtitle">Rechercher une commande</h1>
         <div id="containerAjout">
             <form action="/" method="post">
-                <div><p>Nom</p><input name="nomproduit" type="text" class="inputProduitA"required="required"></div>
-                <div><p>Type</p><input name="typeproduit" type="text" class="inputProduitA"required="required"></div>
-                <div><p>Quantité</p><input name="quantityproduit" type="number" class="inputProduitA"required="required"></div>
-                <div><p>Couleur</p><input name="couleurproduit" type="text" class="inputProduitA"required="required"></div>
-                <div><p>Prix</p><input name="prixproduit" type="number" class="inputProduitA"required="required"></div>
+                <div><p>Référence client</p><input name="refclient" type="text" class="inputProduitA"></div>
+                <div><p>Référence commande</p><input name="refcommande" type="text" class="inputProduitA"></div>
                 <div style="margin-top: 1em;"><input class="submitStock" type="submit" value="Valider"></div>
             </form>
         </div>
 
-        <h1 id="stocktitle">Etat du stock</h1>
+        <h1 id="stocktitle">Commande effectués la veille</h1>
         <form id="containerProduit" action="/" method="post">
             <div class="sectionProduit">
                 <div class="imgContainer"><img alt="produit" src="images/palliote.png"></div>
                 <div class="labels">
-                    <p>Article :</p>
-                    <p>Quantité en stock :</p>
-                    <p>Couleur :</p>
+                    <p>Numéro de commande :</p>
+                    <p>Prix de la commande :</p>
+                    <p>Nom du client :</p>
+                    <p>Adresse du client :</p>
+                    <p>Numéro du client :</p>
                 </div>
 
                 <div class="action">

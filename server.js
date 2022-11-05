@@ -55,6 +55,14 @@ app.get('/shop', (req, res) => {
   res.render('shop')
 });
 
+app.get('/stock', (req, res) => {
+  res.render('Admin')
+});
+
+app.get('/commandes', (req, res) => {
+  res.render('stock')
+});
+
 
 
 // // Create endpoint handlers for /beers
