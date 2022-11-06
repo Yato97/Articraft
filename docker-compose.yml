@@ -1,9 +1,18 @@
 version: '1.0'
 services:
-  mongodb-server:
+
+  db-users:
     image: mongo
     volumes:
-      - ./data/db:/data/db
+      - ./db/users:/data/db
+
+  db-main:
+    image: mongo
+    volumes:
+      - ./db/main:/data/db
+
+  rabbitmq-server:
+    image: rabbitmq
       
   auth-server:
     build: ./auth-server/app
