@@ -50,7 +50,7 @@ exports.getProduct = function(req, res) {
 // Create endpoint /api/products/:product_id for PUT
 exports.putProduct = function(req, res) {
   // Use the product model to find a specific product
-  product.update({ quantity: req.body.quantity }, { price: req.body.price }, function(err, num, raw) {
+  product.update({_id: req.params.product_id }, { quantity: req.body.quantity }, { price: req.body.price }, function(err, num, raw) {
     if (err)
       return res.send(err);
 
