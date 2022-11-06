@@ -33,7 +33,7 @@
         </div>
 
         <h1 id="stocktitle">Etat du stock</h1>
-        <form id="containerProduit" action="/" method="put">
+        <form id="containerProduit" action="/api/product" method="put">
             <% for (var i = 0; i<subs.length; i++) { %>
                 <div class="sectionProduit">
                     <div class="imgContainer"><img alt="produit" src="images/<%= subs[i].color%>.png"></div>
