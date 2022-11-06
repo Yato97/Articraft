@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var ejs = require('ejs');
 var session = require('express-session');
 var passport = require('passport');
-// var beerController = require('./controllers/beer');
+
 var userController = require('./controllers/user');
 var authController = require('./controllers/auth');
 // var oauth2Controller = require('./controllers/oauth2');
@@ -13,9 +13,11 @@ var clientController = require('./controllers/client');
 
 
 var productController = require('./controllers/product');
+var commandeController = require('./controllers/commande');
+
 const { request } = require('express');
 // Connect to the beerlocker MongoDB
-// mongoose.connect('mongodb://localhost:27017/Articraft');
+mongoose.connect('mongodb://localhost:27017/Articraft');
 
 // Create our Express application
 var app = express();
@@ -42,10 +44,6 @@ app.use(passport.initialize());
 // Create our Express router
 var router = express.Router();
 app.use(express.static("public"));
-
-router.route('/api/product')
-  .post(productController.postProduct)
-  .get(productController.getProducts);
 
 let url = request.url;
 app.get('/', (req, res) => {
@@ -80,6 +78,14 @@ app.get('/commandes', (req, res) => {
 router.route('/api/users')
   .post(userController.postUsers)
   .get(authController.isAuthenticated, userController.getUsers);
+
+router.route('/api/product')
+  .post(productController.postProduct)
+  .get(productController.getProducts);
+
+router.route('/api/commande')
+  .post(commandeController.postCommande)
+  .get(commandeController.getCommande);
 
 // // Create endpoint handlers for /clients
 // router.route('/api/clients')

@@ -1,10 +1,10 @@
 // Load required packages
-var product = require('../models/product');
+var Product = require('../models/product');
 
 // Create endpoint /api/product for POST
 exports.postProduct = function(req, res) {
   // Create a new instance of the product model
-  var product = new product();
+  var product = new Product();
 
   // Set the product properties that came from the POST data
   product.name = req.body.name;
@@ -18,7 +18,7 @@ exports.postProduct = function(req, res) {
     if (err)
       return res.send(err);
 
-    res.json({ message: 'product added to the locker!', data: product });
+    res.render({ message: 'product added to DB', data: product });
   });
 };
 
