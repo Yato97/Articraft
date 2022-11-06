@@ -1,3 +1,8 @@
 .DS_Store
+.vscode
 node_modules/
 package-lock.json
+
+servers/auth-server/app/node_modules/
+servers/auth-server/app/package-lock.json
+servers/data/
