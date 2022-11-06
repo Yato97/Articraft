@@ -1,23 +1,23 @@
 // Load required packages
-var express = require('express');
-var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-var ejs = require('ejs');
-var session = require('express-session');
-var passport = require('passport');
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const ejs = require('ejs');
+const session = require('express-session');
+const passport = require('passport');
 
-var userController = require('./controllers/user');
-var authController = require('./controllers/auth');
+const userController = require('./controllers/user');
+const authController = require('./controllers/auth');
 // var oauth2Controller = require('./controllers/oauth2');
-var clientController = require('./controllers/client');
+const clientController = require('./controllers/client');
 
-
-var productController = require('./controllers/product');
-var commandeController = require('./controllers/commande');
+const productController = require('./controllers/product');
+const commandeController = require('./controllers/commande');
 
 const { request } = require('express');
 // Connect to the beerlocker MongoDB
 mongoose.connect('mongodb://localhost:27017/Articraft');
+
 
 // Create our Express application
 var app = express();
@@ -50,29 +50,24 @@ app.get('/', (req, res) => {
     res.render('index')
 });
 app.get('/shop', (req, res) => {
-  res.render('shop')
+  productController.getProductArr( function (err, subs) {
+    if (err) throw err;
+    // else render result
+    res.render('shop', { subs: subs} );
+});
 });
 
 app.get('/stock', (req, res) => {
-  res.render('Admin')
+  productController.getProductArr( function (err, subs) {
+    if (err) throw err;
+    // else render result
+    res.render('Admin', { subs: subs} );
+});
 });
 
 app.get('/commandes', (req, res) => {
   res.render('stock')
 });
-
-
-
-// // Create endpoint handlers for /beers
-// router.route('/api/beers')
-//   .post(authController.isAuthenticated, beerController.postBeers)
-//   .get(beerController.getBeers);
-
-// // Create endpoint handlers for /beers/:beer_id
-// router.route('/api/beers/:beer_id')
-//   .get(beerController.getBeer)
-//   .put(beerController.putBeer)
-//   .delete(authController.isAuthenticated, beerController.deleteBeer);
 
 // Create endpoint handlers for /users
 router.route('/api/users')
@@ -81,6 +76,7 @@ router.route('/api/users')
 
 router.route('/api/product')
   .post(productController.postProduct)
+  .put(productController.putProduct)
   .get(productController.getProducts);
 
 router.route('/api/commande')

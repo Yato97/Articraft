@@ -33,22 +33,22 @@
         </div>
 
         <h1 id="stocktitle">Etat du stock</h1>
-        <form id="containerProduit" action="/" method="post">
-            <div class="sectionProduit">
-                <div class="imgContainer"><img alt="produit" src="images/palliote.png"></div>
-                <div class="labels">
-                    <p>Article :</p>
-                    <p>Quantité en stock :</p>
-                    <p>Couleur :</p>
+        <form id="containerProduit" action="/" method="put">
+            <% for (var i = 0; i<subs.length; i++) { %>
+                <div class="sectionProduit">
+                    <div class="imgContainer"><img alt="produit" src="images/<%= subs[i].color%>.png"></div>
+                    <div class="labels">
+                        <p>Article : <%= subs[i].name%></p>
+                        <p>Quantité en stock : <%= subs[i].quantity%></p>
+                        <p>Couleur : <%= subs[i].color%></p>
+                    </div>
+                    <div class="action">
+                        <div><p>Quantité : </p><input name="quantity" type="number" class="inputProduit"required="required" value="<%= subs[i].quantity%>"></div>
+                        <div><p>Prix : </p><input name="price" type="number" class="inputProduit"required="required" value="<%= subs[i].price%>"></div>
+                        <div><input class="submitStock" type="submit" value="Valider"></div>
+                    </div>
                 </div>
-
-                <div class="action">
-                    <div><p>Quantité : </p><input type="number" class="inputProduit"required="required"></div>
-                    <div><p>Seuil : </p><input type="number" class="inputProduit"required="required"></div>
-                    <div><p>Prix : </p><input type="number" class="inputProduit"required="required"></div>
-                    <div><input class="submitStock" type="submit" value="Valider"></div>
-                </div>
-            </div>
+            <% } %>
         </form>
         <div id="containerRecherche"></div>
     </body>

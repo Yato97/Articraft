@@ -63,6 +63,7 @@ h1 {
     flex-wrap: nowrap;
     align-items: center;
     padding-bottom: 2em;
+    margin-top:2em;
     border-bottom: 1px solid white;
     justify-content: space-between;
 }
