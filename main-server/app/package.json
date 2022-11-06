@@ -1,6 +1,9 @@
 {
   "name": "articraft",
   "main": "server.js",
+  "scripts":{
+	"start" : "node src/server.js"
+  },
   "dependencies": {
     "amqplib": "^0.10.3",
     "bcrypt-nodejs": "^0.0.3",

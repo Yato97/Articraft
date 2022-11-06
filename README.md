@@ -1,12 +1,12 @@
 # Articraft
 
-## Installation
-Installer les dépendances
-```bash
-npm i
-```
+Lancement : `docker compose up`
 
-Lancement du serveur
-```bash
-npm start
-```
+## Infos
+
+- Base de données partagée dans `./data/db/`
+- 3 dockers :
+  - Mongodb
+  - auth-server
+  - Articraft website
+

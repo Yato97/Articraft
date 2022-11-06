@@ -1,9 +1,13 @@
-# Serveur d'authentification
+# Application web
 
-Port par défaut : `3001`
+Port par défaut : `3000`
 
 
 ## Installation
+
+```bash
+cd app/
+```
 
 ```bash
 npm i
