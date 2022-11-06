@@ -79,13 +79,14 @@
 
         <!--Flexbox-->
     <div class="shopcontainer">
+            <% for (var i = 0; i<subs.length; i++) { %>
             <div class="item">
                 <div class="fade">
                     <div class="containerDivbis">
-                        <p>Couleur : <strong class="color">Jaune</strong></p>
+                        <p>Couleur : <strong class="color"><%= subs[i].color%></strong></p>
                     </div>
                     <div class="containerDivbis">
-                        <p>Prix : <strong class="prix">50</strong>€</p>
+                        <p>Prix : <strong class="prix"><%= subs[i].price%></strong>€</p>
                     </div>
                     <div class="containerDivbis" class="qte">
                         <p>Quantité désiré :</p>
@@ -93,113 +94,28 @@
                     </div>
                     <button class="buttonAddPanier">Ajouter au panier</button>
                 </div>
-                <img class="imgarticle" alt="images-paysages" src="images/lacmontagne.png">
+                <img class="imgarticle" alt="images-paysages" src="images/<%= subs[i].color%>.png">
             </div>
-
-            <div class="item">
-                <div class="fade">
-                    <div class="containerDivbis">
-                        <p>Couleur : <strong class="color">Marron</strong></p>
-                    </div>
-                    <div class="containerDivbis">
-                        <p>Prix : <strong class="prix">100</strong>€</p>
-                    </div>
-                    <div class="containerDivbis" class="qte">
-                        <p>Quantité désiré :</p>
-                        <input type="number" class="textAreabis" name="qteVar" required="required">
-                    </div>
-                    <button class="buttonAddPanier">Ajouter au panier</button>
-                </div>
-                <img class="imgarticle" alt="images-paysages" src="images/dezert.png">
-            </div>
-            <div class="item">
-                <div class="fade">
-                    <div class="containerDivbis">
-                        <p>Couleur : <strong class="color">Vert</strong></p>
-                    </div>
-                    <div class="containerDivbis">
-                        <p>Prix : <strong class="prix">25</strong>€</p>
-                    </div>
-                    <div class="containerDivbis" class="qte">
-                        <p>Quantité désiré :</p>
-                        <input type="number" class="textAreabis" name="qteVar" required="required">
-                    </div>
-                    <button class="buttonAddPanier">Ajouter au panier</button>
-                </div>
-                <img class="imgarticle" alt="images-paysages" src="images/parck.png">
-            </div>
-
-            <div class="item">
-                <div class="fade">
-                    <div class="containerDivbis">
-                        <p>Couleur : <strong class="color">Bleu clair</strong></p>
-                    </div>
-                    <div class="containerDivbis">
-                        <p>Prix : <strong class="prix">65</strong>€</p>
-                    </div>
-                    <div class="containerDivbis" class="qte">
-                        <p>Quantité désiré :</p>
-                        <input type="number" class="textAreabis" name="qteVar" required="required">
-                    </div>
-                    <button class="buttonAddPanier">Ajouter au panier</button>
-                </div>
-                <img class="imgarticle" alt="images-paysages" src="images/hivers.png">
-            </div>
-
-            <div class="item">
-                <div class="fade">
-                    <div class="containerDivbis">
-                        <p>Couleur : <strong class="color">Rouge</strong></p>
-                    </div>
-                    <div class="containerDivbis">
-                        <p>Prix : <strong class="prix">125</strong>€</p>
-                    </div>
-                    <div class="containerDivbis" class="qte">
-                        <p>Quantité désiré :</p>
-                        <input type="number" class="textAreabis" name="qteVar" required="required">
-                    </div>
-                    <button class="buttonAddPanier">Ajouter au panier</button>
-                </div>
-                <img class="imgarticle" alt="images-paysages" src="images/palliote.png">
-            </div>
-            <div class="item">
-                <div class="fade">
-                    <div class="containerDivbis">
-                        <p>Couleur : <strong class="color">Violet</strong></p>
-                    </div>
-                    <div class="containerDivbis">
-                        <p>Prix : <strong class="prix">200</strong>€</p>
-                    </div>
-                    <div class="containerDivbis" class="qte">
-                        <p>Quantité désiré :</p>
-                        <input type="number" class="textAreabis" name="qteVar" required="required">
-                    </div>
-                    <button class="buttonAddPanier">Ajouter au panier</button>
-                </div>
-                <img class="imgarticle" alt="images-paysages" src="images/sunset.png">
-            </div>
+            <% } %>
     </div>
     <img style="height : 100%;width:100%; position: absolute;top:0;z-index:-1;" alt="images-paysages" src="images/Diapo/fond.jpg">
 
-
-
-    	<!--Pied de page-->
-    	<footer>
-    		<div>
-                <div class="item-footer">
-        			<a href="#">Contact</a>
-                    <a href="#">Aide</a>
-                </div>
-    		</div>
-
-    		<div>
-                <div>
-                    <a href="#">Mentions lègales</a>
-                    <a href="#">Partenariats</a>
-                </div>
+    <footer>
+        <div>
+            <div class="item-footer">
+                <a href="#">Contact</a>
+                <a href="#">Aide</a>
             </div>
-    	</footer>
-        <img style="height : 9em; object-fit: none; position: absolute;" alt="images-paysages" src="images/Fond/winter.png">
+        </div>
+
+        <div>
+            <div>
+                <a href="#">Mentions lègales</a>
+                <a href="#">Partenariats</a>
+            </div>
+        </div>
+    </footer>
+    <img style="height : 9em; object-fit: none; position: absolute;" alt="images-paysages" src="images/Fond/winter.png">
 
 
         <!-- -----------------------------------INSCRIPTION------------------------------------- -->
