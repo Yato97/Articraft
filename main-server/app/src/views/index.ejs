@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="FR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Articraft</title>
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/general.css">
+        <link rel="stylesheet" type="text/css" href="styles/menubar2.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="shortcut icon" type="image/png" href="images/favicone/logo.svg"/>
+        <link rel="stylesheet" href="styles/popup.css">
+        <link rel="stylesheet" href="styles/panier.css">
+        <script src="https://kit.fontawesome.com/10e13df78c.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div>
+            <div id="icocontainer"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div class="parentpanierwrapper">
+                <div class="panierbox">
+                    
+     
+                    <div class="itemoption">
+                        <h2>Devis</h2>
+                        <p id="totalpanier">0</p>
+                            <input class="inputpanier" type="submit" value="Valider la commande">
+            
+                    </div>
+                </div>
+            </div>
+
+
+    	<!--Menubar-->
+    	<nav>
+    		<ul class="open">
+    			<li id="menu1"><a href="#"><i class="fas fa-home"></i></a></li>
+                
+                <div id="sep1" class="separator"></div>
+                
+        		<li class="lix"><a href="shop">Boutique</a>
+        			<ul class="submenu">
+        				<li><a href="html/pages1.html">Catalogue</a></li>
+    				</ul>        			
+                </li>
+                
+                <div id="sep2" class="separator"></div>
+
+        		<li id="sp" class="lix"><a href="#">Mon compte</a>
+        			<ul class="submenu">
+        				<li class="buttonControlIns"><a href="#">Connection</a></li>
+    					<li class="buttonControlIns"><a href="#">Inscription</a></li>
+                        <li><a href="html/pages6.html">Profile</a></li>
+                        <li><a href="html/pages6.html">Mes commandes</a></li>
+    				</ul>
+    			</li>
+
+    		</ul>
+
+            <div class="toggle">
+                <span class="toggle_icon"></span>
+            </div>
+               
+
+    	</nav>
+
+        
+
+    	<div id="space">
+    		
+    	</div>
+        
+        <div id="diapo">
+        	<!--Diaporama-->
+            <div id="slideshow-container">
+                
+
+                    <div id="slideshow">
+                        
+                        <img src="images/Diapo/img2.png" alt="Images2" class="images">
+
+                        <img src="images/Diapo/img7.png" alt="Images6" class="images">
+
+                        <h1>Articraft</h1>
+                  </div>
+            </div>  
+        </div>
+
+       
+
+
+
+
+    	<!--Pied de page-->
+        
+    	<footer>
+    		<div>
+                <div class="item-footer">
+        			<a href="#">Contact</a>
+                    <a href="#">Aide</a>
+                </div>
+    		</div>
+
+    		<div>
+                <div>
+                    <a href="#">Mentions lègales</a>
+                    <a href="#">Partenariats</a>
+                </div>
+            </div>
+    	</footer>
+        <img style="height : 9em; object-fit: none; position: absolute;" alt="images-paysages" src="images/Fond/winter.png">
+        <!-- -----------------------------------INSCRIPTION------------------------------------- -->
+        <!-- --------------------------------------------------------------------------------- -->
+        <div class="overlay">
+            <div class="sub">
+                <h1 class="h1Overlay">Formulaire d'inscription :</h1>
+
+                <form id="formOverlay" action="/api/users" method="post">
+                    <span class="closeSvg"><i class="fa-solid fa-xmark"></i></span>
+                    <div class="containerDiv">
+                        <input class="textArea" type="text" name="username" required="required">
+                        <span>Nom</span>
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="text" name="prenom" required="required">
+                        <span>Prenom</span>
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="text" name="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="password" name="password" required="required">
+                        <span>Mot de passe</span>
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="text" name="addr" required="required">
+                        <span>Adresse</span>
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="date" name="datenaissance" required="required">
+                        <span style="margin-left: 60%">Date de naissance</span>
+                        
+                    </div>
+                    <div class="btn">
+                        <input class="buttonControl" id="generate" type="submit" value="Enregistrer">
+                    </div>
+                </form>
+                
+
+                <div class="lua">
+                    <div class="luaIn"><p id="pct"></p></div>
+                </div>
+
+
+                <div>
+                    <!-- <h1 id="labelCrypt" class="h1Overlay">Clé crypté :</h1> -->
+                    <!-- <p id="result"></p> -->
+                </div>  
+
+            </div>
+        </div>
+
+
+        <!-- -----------------------------------CONNECTION------------------------------------- -->
+        <!-- --------------------------------------------------------------------------------- -->
+        <div class="overlay">
+            <div class="sub">
+                <h1 class="h1Overlay">Formulaire de connection :</h1>
+
+                <form style="height: 13em;" id="formOverlay" action="/" method="post">
+                    <span class="closeSvg"><i class="fa-solid fa-xmark"></i></span>
+                    <div class="containerDiv">
+                        <input class="textArea" type="text" name="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="containerDiv">
+                        <input class="textArea" type="password" name="password" required="required">
+                        <span>Mot de passe</span>
+                    </div>
+                    <div class="btn">
+                        <input class="buttonControl" id="connect" type="submit" value="Connection">
+                        <input class="buttonControl" id="gen" type="submit" value="Mot de passe oublié">
+                    </div>
+                </form>
+                
+
+                <div class="lua">
+                    <div class="luaIn"><p id="pct"></p></div>
+                </div>
+
+
+                <div>
+                    <!-- <h1 id="labelCrypt" class="h1Overlay">Clé crypté :</h1> -->
+                    <!-- <p id="result"></p> -->
+                </div>  
+
+            </div>
+        </div>
+    </div>
+
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/ping.js"></script>
+        <script type="text/javascript" src="js/popup.js"></script>
+        <script type="text/javascript" src="js/panier.js"></script>
+
+
+    </body>
+
+</html>

@@ -1,11 +1,7 @@
 # Articraft
 <a href="#license"><img src="https://img.shields.io/badge/License-MIT-green" alt="License"></a>
 
-## Installation
-Installer les dépendances
-```bash
-npm i
-```
+Lancement : `docker compose up`
 
 Lancement du serveur
 ```bash

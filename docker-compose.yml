@@ -1,0 +1,30 @@
+version: '1.0'
+services:
+
+  db-users:
+    image: mongo
+    volumes:
+      - ./db/users:/data/db
+
+  db-main:
+    image: mongo
+    volumes:
+      - ./db/main:/data/db
+
+  rabbitmq-server:
+    image: rabbitmq
+      
+  auth-server:
+    build: ./auth-server/app
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./auth-server/app/src:/app/src
+      
+  main-server:
+    build: ./main-server/app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./main-server/app/src:/app/src
+  
